@@ -131,8 +131,8 @@ begin
         execute immediate 'grant usage on database ADMIN_DB to role identifier(:1)' using (role_sysadmin);
         execute immediate 'grant usage on schema ADMIN_DB.DEPLOY to role identifier(:1)' using (role_sysadmin);
         begin
-            let grant_sql_1 VARCHAR := 'grant usage on procedure ADMIN_DB.DEPLOY.DEPLOY_DEV_CLONE(VARCHAR, VARCHAR, VARCHAR, VARCHAR) to role ' || :role_sysadmin;
-            let grant_sql_2 VARCHAR := 'grant usage on procedure ADMIN_DB.DEPLOY._PROVISION_DEV_CLONE(VARCHAR, VARCHAR, VARCHAR, VARCHAR) to role ' || :role_sysadmin;
+            let grant_sql_1 VARCHAR := 'grant usage on procedure ADMIN_DB.DEPLOY.DEPLOY_CLONE(VARCHAR, VARCHAR, VARCHAR, VARCHAR) to role ' || :role_sysadmin;
+            let grant_sql_2 VARCHAR := 'grant usage on procedure ADMIN_DB.DEPLOY._PROVISION_CLONE(VARCHAR, VARCHAR, VARCHAR, VARCHAR) to role ' || :role_sysadmin;
             execute immediate :grant_sql_1;
             execute immediate :grant_sql_2;
         exception
