@@ -47,8 +47,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install SnowCLI
-        run: pip install snowflake-cli-labs
 
       - name: Write private key
         run: |
