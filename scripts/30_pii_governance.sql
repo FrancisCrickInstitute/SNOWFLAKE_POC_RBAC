@@ -8,7 +8,7 @@
 -- Prerequisites: Script 00 (GOVERNANCE_DB exists)
 -- Run as: ACCOUNTADMIN (pass --role ACCOUNTADMIN on the CLI)
 -- ============================================================================
-
+USE ROLE ACCOUNTADMIN;
 -- ─────────────────────────────────────────────────────────────────────────────
 -- 1. Create ACCESS_CONTROL schema in GOVERNANCE_DB
 -- ─────────────────────────────────────────────────────────────────────────────
